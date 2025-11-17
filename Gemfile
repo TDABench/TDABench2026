@@ -1,7 +1,8 @@
+# Gemfile (standalone Jekyll)
 source "https://rubygems.org"
 
-# GitHub Pages compatible gem bundle
-gem "github-pages", group: :jekyll_plugins
+gem "jekyll", "~> 4.3"
 
-# For local livereload
-gem "webrick", "~> 1.8"
+group :jekyll_plugins do
+  gem "jekyll-sitemap", "~> 1.4"
+end
