@@ -1,0 +1,1 @@
+Place banner.jpg (1200x600 recommended) and logo.png here.
