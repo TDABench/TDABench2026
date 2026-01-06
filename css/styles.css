@@ -532,6 +532,20 @@ a:hover {
 }
 
 /* ============================================
+   Images that span
+   ============================================ */
+
+.banner-img {
+    width: 100%;
+    height: auto;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+
+/* ============================================
    Cards
    ============================================ */
 .card {
@@ -580,6 +594,50 @@ a:hover {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: var(--spacing-lg);
 }
+
+
+/* Make the image card consistent with other cards */
+.card.card-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0; /* remove extra padding inside the card */
+    overflow: hidden; /* avoid image overflow */
+}
+
+/* Image container */
+.venue-photo {
+    margin: 0;
+    width: 100%;
+}
+
+/* Responsive image */
+.venue-img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover; /* fills wide cards without distortion */
+}
+
+
+/* Overlay caption — white text on the image */
+.venue-caption {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  color: #fff;
+  font-weight: 200;
+  font-size: 0.7rem;
+  padding: 0.75rem 1rem;
+  z-index: 2;
+}
+
+/* Optional: a soft gradient behind the text for readability */
+.overlay-gradient {
+  background: linear-gradient(to top, rgba(0,0,0,0.55), rgba(0,0,0,0.0));
+}
+
 
 /* ============================================
    Goals Section
